@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.brainfeaster.boilerPlateV0.BoilerPlateV0ApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.488 s - in com.brainfeaster.boilerPlateV0.BoilerPlateV0ApplicationTests
