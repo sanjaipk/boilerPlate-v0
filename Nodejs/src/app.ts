@@ -10,12 +10,12 @@ app.use(cors());
 app.use(express.json());
 app.use(menuRoutes);
 
-const uri: string = `mongodb://admin:secure@localhost:27017/admin?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false`
+const uri: string = `mongodb://admin:secure@172.17.0.3:27017/admin?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false`
 mongoose
   .connect(uri)
   .then(() =>
     app.listen(PORT, () =>
-      console.log(`Server running on http://localhost:${PORT}`)
+      console.log(`Server running on http://172.17.0.3:${PORT}`)
     )
   )
   .catch((error) => {

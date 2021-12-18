@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "2ddMSRFznxyklDMAVAYortubWxip8sM394E84NmOtw8yV0GziENmaGWBsOGkK9IFPElk1UysWZcKT3mfLLkFOA==",
+  "success": true,
+  "projectFilePath": "/Users/m_166894/Documents/workspace-spring-tool-suite-4-4.12.1.RELEASE/boilerPlateV0/Dotnet/catalog/catalog.csproj",
+  "expectedPackageFiles": [
+    "/Users/m_166894/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/m_166894/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/m_166894/.nuget/packages/swashbuckle.aspnetcore/5.6.3/swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "/Users/m_166894/.nuget/packages/swashbuckle.aspnetcore.swagger/5.6.3/swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "/Users/m_166894/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.6.3/swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "/Users/m_166894/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.6.3/swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}

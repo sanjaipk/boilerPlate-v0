@@ -4,16 +4,17 @@ import { AsyncLocalStorage } from "async_hooks";
 
 const credentials = {
   user: "postgres",
-  host: "127.0.0.1",
+  host: "172.17.0.6",
   database: "postgres",
   password: "mysecretpassword",
-  port: 5433,
+  port: 5432,
 };
 
-const pool = new Pool(credentials);
+
 
 const getUsers = async (request: Request, response: Response): Promise<void>=> {
     try {
+        const pool = new Pool(credentials);
         const results = await pool.query('SELECT * FROM users ORDER BY id ASC');
         response.status(200).json(results.rows);
     } catch (error) {
@@ -23,6 +24,7 @@ const getUsers = async (request: Request, response: Response): Promise<void>=> {
 
 const getUserById = async (request: Request, response: Response): Promise<void> => {
     try {
+        const pool = new Pool(credentials);
         const id = parseInt(request.params.id);
         const results = await pool.query('SELECT * FROM users WHERE id = $1', [id]);
         response.status(200).json(results.rows)
@@ -33,6 +35,7 @@ const getUserById = async (request: Request, response: Response): Promise<void> 
 
 const createUser = async (request: Request, response: Response): Promise<void> => {
     try {
+        const pool = new Pool(credentials);
         const { name, email } = request.body;
         const result = await pool.query('INSERT INTO users (name, email) VALUES ($1, $2)', [name, email]);
         response.status(201).send(`User added with ID: ${result.insertId}`);
@@ -43,6 +46,7 @@ const createUser = async (request: Request, response: Response): Promise<void> =
 
 const updateUser = async (request: Request, response: Response): Promise<void> => {
     try {
+        const pool = new Pool(credentials);
         const id = parseInt(request.params.id);
         const { name, email } = request.body;
         const result = await pool.query('UPDATE users SET name = $1, email = $2 WHERE id = $3',
@@ -55,6 +59,7 @@ const updateUser = async (request: Request, response: Response): Promise<void> =
 
 const deleteUser = async (request: Request, response: Response): Promise<void> => {
     try {
+        const pool = new Pool(credentials);
         const id = parseInt(request.params.id);
         const result = await pool.query('DELETE FROM users WHERE id = $1', [id]);
         response.status(200).send(`User deleted with ID: ${id}`);
