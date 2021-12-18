@@ -1,0 +1,8 @@
+POST http://localhost:4000/menu
+Content-Type: application/json
+
+{
+    "name": "Hot Dog",
+    "description": "A hot dog",
+    "price": 10
+}

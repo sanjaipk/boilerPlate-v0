@@ -1,0 +1,5 @@
+Creating the Menu type
+Creating the Menu model
+Creating the Menu controllers
+Adding the Menu routes
+Configuring app.ts to connect to Mongo Atlas and start the server.
